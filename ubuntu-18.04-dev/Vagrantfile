@@ -62,9 +62,10 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    apt update
-    apt install -y docker.io gcc g++ make git ruby ruby-dev htop
-    apt install -y python3-dev python3-pip
+    apt-get update
+    apt-get install -y docker.io gcc g++ make git build-essential
+    apt-get install -y htop vim nmap whois
+    apt-get install -y python3-dev python3-pip ruby ruby-dev ansible
     pip3 install ansible-lint
 	  gem install inspec --no-ri --no-rdoc
   SHELL
