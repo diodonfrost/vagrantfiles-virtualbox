@@ -71,8 +71,10 @@ Vagrant.configure("2") do |config|
     ansible-galaxy install diodonfrost.vagrant && ln -s ~/.ansible/roles/diodonfrost.vagrant ~/.ansible/roles/ansible-role-vagrant
     ansible-galaxy install diodonfrost.packer && ln -s ~/.ansible/roles/diodonfrost.packer ~/.ansible/roles/ansible-role-packer
     ansible-galaxy install diodonfrost.terraform && ln -s ~/.ansible/roles/diodonfrost.terraform ~/.ansible/roles/ansible-role-terraform
+    ansible-galaxy install diodonfrost.terragrunt && ln -s ~/.ansible/roles/diodonfrost.terragrunt ~/.ansible/roles/ansible-role-terragrunt    
     ansible-pull -U https://github.com/diodonfrost/ansible-role-vagrant tests/test.yml
     ansible-pull -U https://github.com/diodonfrost/ansible-role-packer tests/test.yml
     ansible-pull -U https://github.com/diodonfrost/ansible-role-terraform tests/test.yml
+    ansible-pull -U https://github.com/diodonfrost/ansible-role-terragrunt tests/test.yml
   SHELL
 end
