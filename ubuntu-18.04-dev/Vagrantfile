@@ -67,9 +67,9 @@ Vagrant.configure("2") do |config|
     apt-get update
     apt-get install -y docker.io gcc g++ make git build-essential
     apt-get install -y htop vim nmap whois
-    apt-get install -y python3-dev python3-pip ruby ruby-dev ansible
+    apt-get install -y python3-dev python3-pip ruby ruby-dev
     pip3 install ansible ansible-lint boto3 botocore sphinx
-    gem install inspec inspec-bin bundle --no-ri --no-rdoc
+    gem install bundle --no-ri --no-rdoc
     ansible-galaxy install diodonfrost.vagrant && ln -s ~/.ansible/roles/diodonfrost.vagrant ~/.ansible/roles/ansible-role-vagrant
     ansible-galaxy install diodonfrost.packer && ln -s ~/.ansible/roles/diodonfrost.packer ~/.ansible/roles/ansible-role-packer
     ansible-galaxy install diodonfrost.terraform && ln -s ~/.ansible/roles/diodonfrost.terraform ~/.ansible/roles/ansible-role-terraform
