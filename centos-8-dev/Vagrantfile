@@ -85,11 +85,13 @@ Vagrant.configure("2") do |config|
     /usr/local/bin/ansible-galaxy install diodonfrost.terragrunt && ln -s ~/.ansible/roles/diodonfrost.terragrunt ~/.ansible/roles/ansible-role-terragrunt
     /usr/local/bin/ansible-galaxy install diodonfrost.sonar_scanner && ln -s ~/.ansible/roles/diodonfrost.sonar_scanner ~/.ansible/roles/ansible-role-sonar-scanner
     /usr/local/bin/ansible-galaxy install diodonfrost.git_lfs && ln -s ~/.ansible/roles/diodonfrost.git_lfs ~/.ansible/roles/ansible-role-git-lfs
+    ansible-galaxy install diodonfrost.ohmyzsh && ln -s ~/.ansible/roles/diodonfrost.ohmyzsh ~/.ansible/roles/ansible-role-ohmyzsh
     /usr/local/bin/ansible-pull -U https://github.com/diodonfrost/ansible-role-vagrant tests/test.yml
     /usr/local/bin/ansible-pull -U https://github.com/diodonfrost/ansible-role-packer tests/test.yml
     /usr/local/bin/ansible-pull -U https://github.com/diodonfrost/ansible-role-terraform tests/test.yml
     /usr/local/bin/ansible-pull -U https://github.com/diodonfrost/ansible-role-terragrunt tests/test.yml
     /usr/local/bin/ansible-pull -U https://github.com/diodonfrost/ansible-role-sonar-scanner tests/test.yml
     /usr/local/bin/ansible-pull -U https://github.com/diodonfrost/ansible-role-git-lfs tests/test.yml
+    /usr/local/bin/ansible-pull -U https://github.com/diodonfrost/ansible-role-ohmyzsh tests/test.yml
   SHELL
 end
