@@ -72,8 +72,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     dnf install -y epel-release
     dnf install -y net-tools unzip curl wget git
-    dnf install -y htop vim nmap whois python3 python3-pip
-    python3 -m pip install ansible
+    dnf install -y htop vim nmap whois openssl-devel gcc python38 python38-pip python38-cffi python38-devel
+    python3 -m pip install --upgrade setuptools setuptools-rust wheel pip && python3 -m pip install ansible
 	  dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 	  dnf install --nobest -y docker-ce
 	  systemctl enable docker
